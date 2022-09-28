@@ -1,0 +1,28 @@
+//1. Append:
+
+internal class Program
+{
+	public static void Main(string[] args)
+	{
+		int[] arr = { 1, 2 };
+
+		Console.WriteLine("enter a number you wish to append: ");
+		int num = int.Parse(Console.ReadLine());
+
+		void Add(int[] arr, int num)
+		{
+			int[] newArr = new int[arr.Length + 1];
+
+			for (int i = 0; i < arr.Length; i++)
+			{
+				newArr[i] = arr[i];
+			}
+			newArr[arr.Length] = num;
+			foreach (var item in newArr)
+			{
+				Console.Write($"{item} ");
+			}
+		}
+
+
+		Add(arr, num);
